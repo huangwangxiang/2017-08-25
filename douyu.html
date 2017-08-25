@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.box{
+		width:400px;
+		height: 200px;
+		border: 1px solid #f00;
+		margin:0 auto;
+		position: relative;
+		background:#f00;
+	}
+	.box:hover b{
+		opacity: 1;  /*不能使用display:block,这样不会有过渡效果*/
+		transform: scale(1);
+	}
+	.box b{
+		position:absolute;
+		width:40px;
+		height: 40px;
+		top:80px;
+		left:180px;
+		background:url("play.png") no-repeat center center;
+		opacity: 0;  /*不能使用display:none,这样hover的时候不会有过渡效果*/
+		transform: scale(2);
+		transition: all ease-out 200ms;
+	}
+</style>
+<body>
+	<div class="box">
+		<b></b>
+	</div>
+</body>
+</html>
